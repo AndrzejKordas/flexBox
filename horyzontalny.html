@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+.rowX{
+	border:1px solid #000;
+	min-height:80vh;
+	
+	display: flex;
+    flex-wrap: wrap;
+	justify-content:space-between;
+	
+	align-items: flex-end;
+	}
+
+.rowX img {
+    flex: 33%;
+    max-width: 33%;
+	height:auto;
+    padding: 0.4rem;
+}	
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+    .rowX img {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .rowX img {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+</style>
+<body>
+
+<div class="rowX"> 
+    <img src="images/wedding.jpg" style="align-self:center">
+    <img src="images/falls2.jpg" style="align-self:flex-start">
+    <img src="images/paris.jpg">
+</div>
+
+</body>
+</html>
+
